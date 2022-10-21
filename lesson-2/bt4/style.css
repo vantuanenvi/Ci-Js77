@@ -1,0 +1,62 @@
+html{
+    margin: 0;
+}
+#container{
+    width: 60%;
+    height: 50vh;
+    margin-left: 20%;
+}
+input{
+    background-color: rgb(238 238 238);
+}
+#inputBox{
+    margin: 20px 20px;
+}
+#inputBox > input{
+    width: 32%;
+    margin-right: 20px;
+    padding: 0px 8px;
+}
+#user-infor{
+    margin: 12px 20px;
+}
+#user-infor > input {
+    width: 60%;
+}
+#user-infor > button{
+    padding: 4px 12px;
+    margin: 0px 8px;
+}
+#user-list{
+    padding: 0px;
+}
+input{
+    font-size: 24px;
+    border-radius: 12px;
+    
+}
+button{
+    background-color: rgb(48 87 190);
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+#addButton{
+    padding: 4px 24px;
+    
+}
+#liName{
+    width: 60%;
+    font-size: 24px;
+    list-style: none;
+    border-radius: 12px;
+    background-color: rgb(230 230 230);
+    padding: 8px ;
+    margin-top: 12px;
+}
+#space{
+    margin: 0px;
+   float: right;
+    
+}

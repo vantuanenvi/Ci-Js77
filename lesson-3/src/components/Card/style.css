@@ -1,0 +1,93 @@
+* {
+  background-color: rgb(23 14 36);
+}
+.songs-card {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+}
+.card {
+  color: white;
+  padding: 0px 20px;
+}
+
+.name {
+  font-size: 20px;
+}
+.singer {
+  color: #8b8791;
+  font-size: 12px;
+}
+.date {
+  color: #8b8791;
+  font-size: 12px;
+}
+.title {
+  height: 60px;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+h2 {
+  font-size: 12px;
+  font-weight: 300;
+  color: white;
+  border-radius: 12px;
+  padding: 4px 20px;
+  float: left;
+}
+h2:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+.songs {
+  margin-left: 2%;
+  border: transparent 1px solid;
+  background-color: rgb(155 77 224);
+}
+.album {
+  margin-left: 12px;
+  border: rgb(47 39 58) 1px solid;
+  background-color: rgb(23 14 36);
+}
+.item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  border: 1px solid;
+  margin: 8px 4%;
+  float: left;
+  padding: 8px 20px;
+}
+.item:hover {
+  filter: brightness(250%);
+  opacity: 0.7;
+}
+
+.text-gray {
+  margin: 4px 0px;
+  color: #8b8791;
+  font-size: 12px;
+}
+.love-songs {
+    grid-gap: 2%;
+    display: grid;
+    grid-template-columns: 18% 18% 18% 18% 18%;
+}
+.love-card {
+  color: white;
+}
+.love-des {
+  color: #8b8791 !important;
+}
+.container{
+    color: white;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.heading{
+    margin-left: 20px;
+    display: flex;
+    font-size: 24px;
+}
+.love-title{
+    font-size: 16px;
+}
