@@ -46,6 +46,10 @@ button{
     padding: 4px 24px;
     
 }
+@keyframes changeColor{
+    from {background-color: rgb(230 230 230);}
+    to {background-color: rgb(103 160 75);}
+}
 #liName{
     width: 60%;
     font-size: 24px;
@@ -54,6 +58,8 @@ button{
     background-color: rgb(230 230 230);
     padding: 8px ;
     margin-top: 12px;
+    animation-name: changeColor;
+    animation-duration: 4s
 }
 #space{
     margin: 0px;

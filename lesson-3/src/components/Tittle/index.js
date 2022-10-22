@@ -8,7 +8,7 @@ function Title() {
         <div className="love-songs">
           {loveSongs.map((loveSong) => (
             <div className="love-card">
-              <img className="picture-title"></img>
+              <img className="songLove-img" src= {loveSong.loveSUrl}></img>
               <div className="love-tittle">{loveSong.title}</div>
               <div className="love-des">{loveSong.description}</div>
             </div>
