@@ -60,6 +60,7 @@ h2:hover {
 .item:hover {
   filter: brightness(250%);
   opacity: 0.7;
+  cursor: pointer;
 }
 
 .text-gray {
@@ -69,6 +70,12 @@ h2:hover {
 }
 .love-tittle{
   margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 700 ;
+}
+.love-tittle:hover{
+  cursor: pointer;
+  color: #9b4de0 ;
 }
 .love-songs {
     grid-gap: 2%;
@@ -77,6 +84,10 @@ h2:hover {
 }
 .love-card {
   color: white;
+}
+.songLove-img:hover{
+  opacity: 0.7;
+  cursor: pointer;
 }
 .love-des {
   color: #8b8791 !important;
@@ -90,6 +101,9 @@ h2:hover {
     margin-left: 20px;
     display: flex;
     font-size: 24px;
+}
+.album-content{
+  text-align: start;
 }
 .love-title{
     font-size: 16px;
