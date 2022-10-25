@@ -1,0 +1,73 @@
+* {
+    background-color: rgb(23 14 36);
+    font-weight: 400;
+  }
+.App{
+    margin-left: 240px;
+}
+.container{
+    padding: 0px 59px;
+}
+h1{
+    text-align: left;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.card{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap:20px ;
+}
+.box{
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+   
+}
+.item{
+    display: flex;
+    padding-top: 8px;
+
+}
+.item:hover{
+    cursor: pointer;
+}
+.rank{
+    align-self: center;
+    color:#fff;
+    margin: auto 12px auto 0px;
+
+}
+.cover{
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+}
+.content{
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    
+}
+.left , .right{
+    padding: 0px 12px;
+   border: 2px solid ;
+   border-radius: 16px;
+}
+.name{
+    font-size: 14px;
+}
+.chanel , .date{
+    font-size: 12px;
+    margin: 4px 0px;
+    color: #928e97;
+}
+.chanel:hover{
+    color: #a65fe4;
+}
+.left, .right, .item, .box, .name, .chanel, .date, .box, .content,.rank{
+background-color: #2f273a;
+}

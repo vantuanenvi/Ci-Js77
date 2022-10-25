@@ -5,7 +5,8 @@ import Title from "./components/Tittle";
 function App() {
   return (
     <div className="App">
-      <div className="title">
+      <h1 className="top">Mới Phát Hành</h1>
+      <div className="tittle">
         <h2 className="songs">BÀI HÁT</h2>
         <h2 className="album"> ALBUM</h2>
       </div>
