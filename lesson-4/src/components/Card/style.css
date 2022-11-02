@@ -62,7 +62,7 @@
 .name{
     font-size: 14px;
 }
-.chanel , .date{
+.chanel , .date {
     font-size: 12px;
     margin: 4px 0px;
     color: #928e97;
@@ -72,10 +72,10 @@
 }
 
 
-.left ,.right{
+.left, .right{
     background-color: #2f273a;
 }
- .item, .icon-date,.box, .name, .chanel, .date, .box, .content,.rank {
+.sum, .item, .icon-date,.box, .update,.name, .chanel, .date, .box, .content,.rank {
         background-color: inherit;
 }
 .item:hover  {
@@ -85,13 +85,19 @@
     padding: 0px 8px; 
     
 }
-.icon-date{
-    display: flex;
-    justify-content: space-between;
+.update{
+    color: #fff;
+    font-size: 12px;
+    margin: 4px 0px;
+    color: #928e97;
 }
-.right-item{
+.icon-date{
+
+
+}
+.mark-more, .icon,.right-item{
     display: none;
-    float: right;
+    
     background-color: #443d4e;
 }
 .play-btn{
@@ -102,6 +108,8 @@
     background-color: transparent;
     color:#fff
 }
-.icon{
-    background-color: #443d4e;
+
+.item:hover ~.cover{
+    opacity: 0.7;
 }
+
