@@ -1,7 +1,7 @@
 import "./style.css";
 import songs from "../../data/songs";
 import React from "react";
-function Card({index}) {
+function Card() {
   return (
     <div className="card">
       <div className="songs-card">
