@@ -9,11 +9,9 @@ function countDuplicate(input){
         }
         let i = 0;
         for (let prop in counts){
-            if (counts[prop] >= 1){     
             let output =  'number ' + prop + ' counted ' + counts[prop] ;
             console.log(output);
             ++i
-        }
     }
     console.log('Số lượng số: ' , i )
 }
