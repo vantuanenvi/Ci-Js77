@@ -1,0 +1,19 @@
+.chart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px   ;
+    width: 740px;
+    height: 200px;
+    background-color:#E1CAE4;
+    margin-left: 30px;
+    border-radius: 12px;
+  }
+.bar-item{
+    margin-top: 16px;
+    margin-bottom: 8px;
+    height: 120px;
+    width: 24px;
+    background-color: #BAA5ED;
+    border-radius: 12px;
+}
