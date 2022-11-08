@@ -7,7 +7,7 @@ function Student(){
         setStudent({...student, age: student.age + 1})
     }
     return(
-    <div className='Student'>
+    <div className='Content'>
         <h3> Hello! I'm {student.name}. I'm {student.age} years old!</h3>
         <button onClick={clickIncreaseAge}>Increase Age me</button>
     </div>
