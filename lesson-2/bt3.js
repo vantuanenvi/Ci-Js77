@@ -1,9 +1,9 @@
-const arr = [1,1,1,3,3,3]
+const arr = [1,1]
 function findMostDuplicate(arr){
     arr.sort();
     let max =[0, 0];
     let count = 1;
-    for(let i = arr.length-1; i > 0 ; --i){
+    for(let i = arr.length-1; i >= 0 ; --i){
         if(arr[i] === arr[i-1]){
             ++count;
             console.log(count)
