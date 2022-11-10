@@ -9,11 +9,26 @@
     margin-left: 30px;
     border-radius: 12px;
   }
-.bar-item{
+.bar-container{
     margin-top: 16px;
     margin-bottom: 8px;
     height: 120px;
     width: 24px;
     background-color: #BAA5ED;
     border-radius: 12px;
+    border: 2px solid #000000;
+  
+  
+    
+
+
+}
+.bar-percent{
+  border-radius: 10px;
+  border-style: none;
+  transform: translateY(237%);
+  width: 102%;
+  background-color: #3D15A9;
+  height: 20% !important;
+
 }

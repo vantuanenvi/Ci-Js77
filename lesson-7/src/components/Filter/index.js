@@ -1,12 +1,19 @@
 import React from "react";
 
-function Filter(){
+const Filter =({setYear}) => {
+    const years =[2022,2021,2023];
+    const handleChangeYear = (e) =>{
+        setYear(e.target.value);
+    }
     return(
-        <div className="filler-bar">
+        <div className="filler-bar" onChange={handleChangeYear}>
         <p className="add-name"> Filler by year</p>
-        <input className="date-filler" type="date" 
-        placeholder="2022"
-        min = "2019-01-01" max = "2022-12-31" ></input>
+        <select className="date-filler" 
+        >
+            {years.map((year)=>{
+                return <option value={year}>{year}</option>
+            })}
+        </select>
         </div>
     )
 }

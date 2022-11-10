@@ -103,7 +103,7 @@
   font-size: 32px;
   line-height: 21px;
 }
-.date {
+.date-container {
   display: flex;
   flex-direction: column;
   width: 100px;
@@ -126,7 +126,7 @@
 .month {
   margin-top: 16px;
 }
-.boil {
+.day {
   font-weight: 700;
   margin-bottom: 16px;
 }
