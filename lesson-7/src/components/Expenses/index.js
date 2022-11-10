@@ -24,12 +24,11 @@ function Expenses(props) {
       date :{
         year: "2022",
         day: " 16",
-        month: "March",
-        monthId: 3,
-
+        month: "May",
+        monthId: 5,
       },
       name: "New Phone",
-      spend: "200",
+      spend: "100",
       
     },
     {
@@ -42,8 +41,7 @@ function Expenses(props) {
 
       },
       name: "Drink",
-      spend: "100",
-      
+      spend: "75",
     },
     
   ]);

@@ -40,7 +40,6 @@ function Header(props) {
     setName("");
     setSpend("");
     // setDate('default')
-    console.log(newObject.date.year);
   };
   return (
     <div className="App-header">
