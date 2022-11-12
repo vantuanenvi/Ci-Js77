@@ -24,22 +24,25 @@ function Header(props) {
   };
 
   const handleAddItem = () => {
-    let arr = props.arrItem;
+    const expenseList = props.expenseList
+    console.log(expenseList)
     const newObject = {
       id: uuidv4(),
-      name: name,
       date: {
+        monthID:date.getMonth() + 1 ,
         month: date.toLocaleString("default", { month: "long" }),
         year: date.getFullYear(),
         day: date.getDate(),
       },
-      spend: spend,
+      name: name,
+      spend:parseInt(spend),
     };
-    arr.push(newObject);
-    props.updateForm(arr);
+    expenseList.push(newObject)
+    props.setExpenseList(expenseList)
+    console.log(expenseList)
     setName("");
     setSpend("");
-    // setDate('default')
+    // setDate()
   };
   return (
     <div className="App-header">
@@ -62,6 +65,7 @@ function Header(props) {
             <div className="input-form amount">
               <span className="amount">Amount</span>
               <input
+              type="number"
               value={spend}
                 onChange={handleAmountChange}
                 placeholder="Enter amount here"

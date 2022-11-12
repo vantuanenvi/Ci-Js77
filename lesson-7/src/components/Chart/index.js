@@ -1,48 +1,58 @@
 import React from "react";
-import "./style.css" 
+import "./style.css";
 
-function Chart({expenseData,year}){
-let monthSpend = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let maxMonthSpend = 0;
-const monthArr = [    
-"Jan",
-"Feb",
-"Mar",
-"Apr",
-"May",
-"Jun",
-"Jul",
-"Aug",
-"Sep",
-"Oct",
-"Nov",
-"Dec"
-];
-expenseData.filter((data)=>
-parseInt(data.date.year) === parseInt(year)).map((data)=>{
-    return monthSpend[data.date.monthId -1] += parseInt(data.spend);
-});
+function Chart({ expenseData, year }) {
+  let monthSpend = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let maxMonthSpend = 0;
+  const monthArr = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  console.log('expenseData',expenseData);
 
 
-monthSpend.map((data)=>{
-    return((maxMonthSpend < data) ? maxMonthSpend = data : 0)
-})
+  expenseData
+    .filter((data) => data.date.year === parseInt(year))
+    .map((data) => {
+      return (monthSpend[data.date.monthId - 1] += parseInt(data.spend));
+    });
 
 
-    return(
-        <div className="chart">
-            {monthSpend.map((month, index)=>{
-              return(
-        <div key={index}>
-            <div  className="bar-container">
-            <div className="bar-percent "
-                style={{height :`${maxMonthSpend === 0 ? 0: month/maxMonthSpend * 100}%`}}></div>
-                </div>
-                <div className="month-chart">{monthArr[index]}</div>
+  monthSpend.map((data) => {
+    return ((maxMonthSpend < data) ? maxMonthSpend = data : 0);
+  });
+  console.log('maxMonthSpend',maxMonthSpend);
+  
+  return (
+    <div className="chart">
+      {monthSpend.map((month, index) => {
+        return (
+          <div key={index}>
+            <div className="bar-container">
+              <div
+                className="bar-percent "
+                style={{
+                  height: `${
+                    parseInt(maxMonthSpend) === 0 ? 0 : (month / parseInt(maxMonthSpend)) * 100
+                  }%`,
+                }}
+              ></div>
             </div>
-              )
-            })}
-        </div>
-    )
+            <div className="month-chart">{monthArr[index]}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
-export default Chart
+export default Chart;
