@@ -1,0 +1,15 @@
+.register{
+    background-color: antiquewhite;
+    text-align: center;
+    font-size: 30px;
+}
+h2{
+    margin: 0;
+}
+input{
+    margin: 8px ;
+    font-size: 24px;
+}
+.register-btn{
+    font: size 24px;
+}
