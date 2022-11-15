@@ -1,4 +1,4 @@
-import React from "../../../../TranVanTuan-Ci-Js77/lesson-92/node_modules/@types/react";
+import React from "react"
 function NotFound() {
  return (
     <h1>Not Found</h1>

@@ -1,5 +1,5 @@
-import React from "../../../../TranVanTuan-Ci-Js77/lesson-92/node_modules/@types/react"
-import { Link } from "../../../../TranVanTuan-Ci-Js77/lesson-92/node_modules/react-router-dom/dist"
+import React from 'react';
+import { Link } from "react-router-dom"
 
 import './style.css'
 import {products} from "../../storage/products"
@@ -17,7 +17,6 @@ const Products = (props) => {
             <p>Price: {item.price} $</p>
             <button>Add to cart</button>
             </div>
-          
         </div>
                 </Link>
  

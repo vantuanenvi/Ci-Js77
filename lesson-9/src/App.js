@@ -1,4 +1,4 @@
-import {Routes, Route} from '../../TranVanTuan-Ci-Js77/lesson-92/node_modules/react-router-dom/dist'
+import {Routes, Route} from 'react-router-dom'
 
 import './App.css';
 import Login from "./pages/Login";
