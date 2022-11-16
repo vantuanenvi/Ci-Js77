@@ -1,16 +1,22 @@
-import React from "react";
+import { useContext, useEffect, useState } from "react";
+import { UserContext } from "../UserContext";
 
-import './style.css'
+import "./style.css";
 
-function Footer () {
-    return (
-        <div className="footer">
-            <select className="select-language">
-                <option>vi</option>
-                <option>en</option>
+function Footer() {
+  const { isLogin, setIsLogin, language, setLanguage, userName, setUserName } =
+    useContext(UserContext);
+  function handOnChange(e) {
+    setLanguage(e.targe.value);
+  }
 
-            </select>
-        </div>
-    )
+  return (
+    <div className="footer">
+      <select onChange={handOnChange} className="select-language">
+        <option value="VN">VN</option>
+        <option value="EN">EN</option>
+      </select>
+    </div>
+  );
 }
-export default Footer
+export default Footer;

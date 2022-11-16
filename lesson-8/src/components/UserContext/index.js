@@ -1,6 +1,18 @@
-import {createContext } from 'react';
+import {createContext, useState } from 'react';
 
-const defaultValue = {user: 'Login'}
-const UserContext = createContext(defaultValue)
+export const UserContext = createContext()
 
-export default UserContext
+function UserContextProvider(props){
+    const [isLogin, setIsLogin] = useState(false);
+    const [language, setLanguage] = useState('VN');
+    const [userName, setUserName] = useState('');
+
+    return (
+    <UserContext.Provider
+ value={{isLogin,setIsLogin,language,setLanguage,userName,setUserName}}>
+            {props.children}
+    </UserContext.Provider>
+    )
+}
+export default UserContextProvider
+

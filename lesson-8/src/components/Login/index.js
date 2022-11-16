@@ -1,46 +1,79 @@
-import React, { useState } from "react";
-import { useContext } from "react";
+import { React, useState, useEffect, useContext } from "react";
+
 import UserContext from "../UserContext";
-import './style.css'
+import "./style.css";
 
-function Login () {
-    const [toggleWelcome, setToggleWelcome] = useState(false)
-    
+function Login() {
+  const [header, setHeader] = useState(" Đăng nhập");
+  const [logOutText, setLogOutText] = useState("Đăng Xuất");
+  const { isLogin, setIsLogin, language, setLanguage, userName, setUserName } =
+    useContext(UserContext);
+  const [longInNotice, setLogInNotice] = useState(
+    "Xin mừng bạn đã đăng nhập thành công "
+  );
+  const [name, setName] = useState("");
+  function handleNameChange(e) {
+    setName(e.target.value);
+  }
 
-    const userCtx = useContext(UserContext);
-    const changeUserContext = (e) => {
-        userCtx.setUser(e.target.value)
-        
+  function handleLogin() {
+    if (name == "") {
+      if (language == "VN") {
+        alert("Vui lòng điền username");
+      } else {
+        alert("Please write username");
+      }
+    } else {
+      setUserName(name);
+      setIsLogin(true);
+      setName("");
     }
-    
-    const handleSubmit = () =>{
-        
-       
-      
+  }
+
+  function handleLogout() {
+    setIsLogin(false);
+  }
+
+  useEffect(() => {
+    if (!isLogin) {
+      if (language == "VN") {
+        setHeader("Đăng Nhập");
+      } else {
+        setHeader("Login");
+      }
+    } else {
+      setLogOutText("Logout");
+      setLogInNotice("Hello world, I am a web developer");
     }
-    return(
-        <div>
-        
-        <div className="form-container">
-  
-            <form className="form-login">
-                <h3 className="form-header"> Đăng nhập</h3>
-                <hr/>
-                <div className="mg-16">
-                    <input  onChange={changeUserContext} className="input" placeholder="Username..."></input>
-                </div>
-                
-                <div className="mg-16">
-                    <button onClick={handleSubmit} className="sign-in-btn">Đăng nhập</button>
-                </div>
-                </form>
-                </div>
-            
-    
-          
-            </div>
-       
-    
-    )
+  }, [isLogin, language]);
+
+  return (
+    <div className="form-container">
+      {isLogin && (
+        <form className="form-login">
+          <h3 className="form-header">{header}</h3>
+          <hr />
+          <div className="mg-16">
+            <input
+              onChange={handleNameChange}
+              className="input"
+              placeholder="Username..."
+            ></input>
+          </div>
+          <div className="mg-16">
+            <button onClick={handleLogin} className="sign-in-btn">
+              {header}
+            </button>
+          </div>
+        </form>
+      )}
+      {!isLogin && (
+        <div className="welcome-container">
+          <div className="login-notice">{longInNotice}</div>
+          <button onClick={handleLogout} className="logout-btn">{logOutText}</button>
+        </div>
+      )}
+    </div>
+  );
 }
-export default Login
+export default Login;
