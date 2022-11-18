@@ -7,7 +7,7 @@ function Footer() {
   const { isLogin, setIsLogin, language, setLanguage, userName, setUserName } =
     useContext(UserContext);
   function handOnChange(e) {
-    setLanguage(e.targe.value);
+    setLanguage(e.target.value);
   }
 
   return (

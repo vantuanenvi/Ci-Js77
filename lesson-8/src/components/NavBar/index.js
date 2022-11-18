@@ -5,17 +5,18 @@ import { UserContext } from "../UserContext";
 import "./style.css";
 
 function NavBar() {
-  const [textLogin, setTextLogin] = useState("Đăng nhập");
+  const [textLogin, setTextLogin] = useState('Đăng nhập');
   const { isLogin, setIsLogin, language, setLanguage, userName, setUserName } = useContext(UserContext);
+  
   useEffect(() => {
     if (!isLogin) {
-      if (language == "VN") {
-        setTextLogin("Đăng nhập");
+      if (language == 'VN') {
+        setTextLogin('Đăng nhập');
       } else {
-        setTextLogin("Login");
+        setTextLogin('Login');
       }
     } else {
-      if (language == "VN") {
+      if (language == 'VN') {
         setTextLogin(`Xin Chào, ${userName}`);
       } else {
         setTextLogin(`Welcome, ${userName}`);

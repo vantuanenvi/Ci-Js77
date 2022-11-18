@@ -35,3 +35,14 @@ hr{
     padding: 0x 20px;
     border-radius: 12px;
 }
+.welcome-container{
+    color: black;
+    font-size: 24px;
+}
+.logout-btn{
+    margin: 12px;
+    padding: 8px;
+}
+.login-notice{
+    margin-top: 12px;
+}
