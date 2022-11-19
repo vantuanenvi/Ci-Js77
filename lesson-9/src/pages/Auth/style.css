@@ -1,0 +1,13 @@
+.container{
+    background-color: beige;
+}
+ul{
+    list-style: none;
+}
+button{
+    font-size: 20px;
+    
+}
+.mg-t20{
+    margin-top: 20px;
+}

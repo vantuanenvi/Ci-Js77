@@ -1,5 +1,9 @@
+
+
 import './style.css'
 const Login = () => {
+
+
     return (
         <div className="login"> 
             <h2>Login</h2>
@@ -9,7 +13,7 @@ const Login = () => {
                 <br/>
                 <input type='password' placeholder="password"></input>
                 <br/>
-            <button className="login-btn">Login</button>
+            <button  className="login-btn">Login</button>
             </div>
         </div>
        
